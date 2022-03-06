@@ -15,7 +15,7 @@
     <script type="text/babel">
         const {useState} = React;
 
-        const ContrlledComponent = () => {
+        const NameForm = () => {
             const [state, setState] = useState({value: ''});
 
             const handleChange = (event) => {
@@ -28,15 +28,17 @@
             }
 
             return (
-                <form onSubmit={handleSubit}></form>
-        
+                <form onSubmit={handleSubmit}>
+                    <label>
+                        Name:
+                        <input type="text" value={state.value} onChange={handleChange} />
+                    </label>
+                    <input type="submit" value="submit" />                    
+                </form>
             )
-
-
         }
 
-
+        ReactDOM.render(<NameForm />, document.getElementById('root'));
     </script>
-    
 </body>
 </html>
