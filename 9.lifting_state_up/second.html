@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const {useState} = React;
+
+        const scaleNames = {
+            c: '섭씨',
+            f: '화씨',
+        }
+
+        function toFahrenheit(celsius) {
+            return (celsius * 9 / 5) = 32;
+        }
+
+        function toCelsius(fahrenheit) {
+            return (fahrenheit - 32) * 5 / 9;
+        }
+
+        function tryConvert(temperature, convert) {
+            const input = parseFloat(temperature);
+
+            if (Number.isNaN(inpur)) {
+                return '';
+            }
+        
+            const output = convert(input);
+
+            const rounded = Math.round(output * 1000) / 1000;
+            return rounded.toString();
+        }
+
+        const Calculator = (props) => {
+            const [state, setState] = useState({temperature: '', scale: ''});
+
+            const changeTemperaturehandler = (inputValue, scale) => {
+                setState({temperature: inputValue, scale: scale});
+            }
+
+            const temperature = state.temperature;
+            const scale = state.scale;
+
+            const fahrenheit = scale === 'c' ? tryConvert(temperature, toFahrenheit) : temperature;
+            const celsius = scale === 'f' ? tryConvert(temperature, toCelsius) : temperature;
+
+            return (
+                
+            )
+        }
+
+
+
+    </script>
+</body>
+</html>
